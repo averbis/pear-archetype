@@ -56,7 +56,21 @@ annotatorClassName: MyAnnotator
 This will generate a UIMA annotator project structure within the `my-annotator` directory:
 
 ```
-
+my-annotator/
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── example
+    │               └── nlp
+    │                   └── MyAnnotator.java
+    └── test
+        └── java
+            └── com
+                └── example
+                    └── nlp
+                        └── PearPackageIT.java
 ```
 
 
