@@ -60,17 +60,21 @@ my-annotator/
 ├── pom.xml
 └── src
     ├── main
-    │   └── java
-    │       └── com
-    │           └── example
-    │               └── nlp
-    │                   └── MyAnnotator.java
+    │   ├── java
+    │   │   └── com
+    │   │       └── example
+    │   │           └── MyAnnotator.java
+    │   └── resources
+    │       ├── META-INF
+    │       │   └── org.apache.uima.fit
+    │       │       └── types.txt
+    │       └── MyAnnotatorTypesystem.xml
     └── test
         └── java
             └── com
                 └── example
-                    └── nlp
-                        └── PearPackageIT.java
+                    └── PearPackageIT.java
+
 ```
 
 
