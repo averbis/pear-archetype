@@ -104,7 +104,7 @@
 							<phase>generate-sources</phase>
 							<configuration>
 								<typeSystemIncludes>
-									<!-- <typeSystemInclude>src/main/resources/de/averbis/tutorials/typesystem/HelloWorldTypesystem.xml</typeSystemInclude> -->
+									<typeSystemInclude>src/main/resources/${annotatorClassName}Typesystem.xml</typeSystemInclude>
 								</typeSystemIncludes>
 							</configuration>
 							<goals>
