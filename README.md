@@ -1,4 +1,4 @@
-# ruta-pear-archetype [![Build Status](https://travis-ci.com/averbis/pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/pear-archetype) ![](https://img.shields.io/maven-central/v/de.averbis.textanalysis/pear-archetype.svg?style=flat)
+# pear-archetype [![Build Status](https://travis-ci.com/averbis/pear-archetype.svg?branch=master)](https://travis-ci.com/averbis/pear-archetype) ![](https://img.shields.io/maven-central/v/de.averbis.textanalysis/pear-archetype.svg?style=flat)
 
 
 Project template to bootstrap UIMA annotators written in Java and package them as a PEAR package. 
@@ -49,7 +49,7 @@ groupId: com.example
 artifactId: my-annotator
 version: 1.0
 package: com.example.nlp
-rutaScriptName: MyAnnotator
+annotatorClassName: MyAnnotator
  Y: : y
 ```
 
