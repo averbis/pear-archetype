@@ -104,7 +104,7 @@
 							<phase>generate-sources</phase>
 							<configuration>
 								<typeSystemIncludes>
-									<typeSystemInclude>src/main/resources/ContractAnnotatorTypesystem.xml</typeSystemInclude>
+									<typeSystemInclude>src/main/resources/com/example/nlp/ContractAnnotatorTypesystem.xml</typeSystemInclude>
 								</typeSystemIncludes>
 							</configuration>
 							<goals>

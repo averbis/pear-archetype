@@ -21,8 +21,17 @@
 		<fileSet filtered="true" packaged="true">
 			<directory>src/main/java</directory>
 		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/main/resources</directory>		
+			<excludes>
+				<exclude>META-INF/**</exclude>
+			</excludes>	
+		</fileSet>
 		<fileSet filtered="true" packaged="false">
-			<directory>src/main/resources</directory>
+			<directory>src/main/resources</directory>		
+			<includes>
+				<include>META-INF/**</include>
+			</includes>	
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
 			<directory>src/test/java</directory>
