@@ -63,17 +63,22 @@ my-annotator/
     │   ├── java
     │   │   └── com
     │   │       └── example
-    │   │           └── MyAnnotator.java
+    │   │           └── nlp
+    │   │               └── MyAnnotator.java
     │   └── resources
-    │       ├── META-INF
-    │       │   └── org.apache.uima.fit
-    │       │       └── types.txt
-    │       └── MyAnnotatorTypesystem.xml
+    │       ├── com
+    │       │   └── example
+    │       │       └── nlp
+    │       │           └── MyAnnotatorTypesystem.xml
+    │       └── META-INF
+    │           └── org.apache.uima.fit
+    │               └── types.txt
     └── test
         └── java
             └── com
                 └── example
-                    └── PearPackageIT.java
+                    └── nlp
+                        └── PearPackageIT.java
 
 ```
 
