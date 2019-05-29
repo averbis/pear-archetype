@@ -53,6 +53,15 @@ annotatorClassName: MyAnnotator
  Y: : y
 ```
 
+(optional) Likewise the project can be generated in non-interactive mode with the following command:
+
+```
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-annotator -Dversion=1.0 -Dpackage=com.example.nlp -DannotatorClassName=MyAnnotator -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=pear-archetype -DarchetypeVersion=0.1.0-SNAPSHOT -DinteractiveMode=false
+```
+
+
+## Result
+
 This will generate a UIMA annotator project structure within the `my-annotator` directory:
 
 ```
