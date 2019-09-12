@@ -12,7 +12,7 @@ Project template to bootstrap UIMA annotators written in Java and package them a
 New Java UIMA annotator projects with PEAR packaging can be generated with the following maven command:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=pear-archetype -DarchetypeVersion=1.0.0
+mvn archetype:generate -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=pear-archetype -DarchetypeVersion=1.1.0
 ```
 You need to define a [groupId, artifactId and version](https://maven.apache.org/guides/mini/guide-naming-conventions.html) for your UIMA annotator project. 
 
@@ -56,7 +56,7 @@ annotatorClassName: MyAnnotator
 (optional) Likewise the project can be generated in non-interactive mode with the following command:
 
 ```
-mvn archetype:generate -DgroupId=com.example -DartifactId=my-annotator -Dversion=1.0 -Dpackage=com.example.nlp -DannotatorClassName=MyAnnotator -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=pear-archetype -DarchetypeVersion=1.0.0 -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-annotator -Dversion=1.0 -Dpackage=com.example.nlp -DannotatorClassName=MyAnnotator -DarchetypeGroupId=de.averbis.textanalysis -DarchetypeArtifactId=pear-archetype -DarchetypeVersion=1.1.0 -DinteractiveMode=false
 ```
 
 
