@@ -14,7 +14,7 @@
 	<properties>
 		<!-- See https://github.com/averbis/core-typesystems for latest version of Averbis core typesystems  -->
 		<core-typesystems-version>3.23.0</core-typesystems-version>
-		<uima-version>2.10.3</uima-version>
+		<uima-version>2.10.4</uima-version>
 		<uimafit-version>2.4.0</uimafit-version>
 		<junit-version>4.12</junit-version>
 		<maven-build-helper-plugin-version>3.0.0</maven-build-helper-plugin-version>
