@@ -16,7 +16,7 @@
 		<core-typesystems-version>3.23.0</core-typesystems-version>
 		<uima-version>2.10.4</uima-version>
 		<uimafit-version>2.4.0</uimafit-version>
-		<junit-version>4.12</junit-version>
+		<junit-version>4.13.1</junit-version>
 		<maven-build-helper-plugin-version>3.0.0</maven-build-helper-plugin-version>
 		<maven-failsafe-plugin-version>2.21.0</maven-failsafe-plugin-version>
 		<maven.compiler.source>1.8</maven.compiler.source>
