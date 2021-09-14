@@ -1,9 +1,9 @@
 package ${package};
 
 import java.io.File;
-import java.io.IOException;
+import java.util.Collection;
 
-import org.apache.uima.UIMAException;
+import org.apache.commons.io.FileUtils;
 import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.fit.factory.JCasFactory;
@@ -13,6 +13,7 @@ import org.apache.uima.pear.tools.PackageBrowser;
 import org.apache.uima.pear.tools.PackageInstaller;
 import org.apache.uima.resource.PearSpecifier;
 import org.apache.uima.util.XMLInputSource;
+import org.junit.Assert;
 import org.junit.Test;
 
 /*
@@ -22,39 +23,34 @@ import org.junit.Test;
  */
 public class PearPackageIT {
 
-	/*
-	 * Make sure that the annotator PEAR package 
-	 * can be installed by the UIMA PackageInstaller
-	 */
 	@Test
-	public void testInstallPearPackage() {
+	public void testProcessText() throws Exception {
 		
-		this.installPackage();			
-	}
-	
-	/*
-	 * Make sure that the annotator is able to 
-	 * process text without exceptions
-	 */
-	@Test
-	public void testProcessText() throws IOException, UIMAException {
-		
-		PackageBrowser packageBrowser = this.installPackage();		
+		PackageBrowser packageBrowser = this.installPackage();
 		XMLInputSource xmlInputSource = new XMLInputSource(packageBrowser.getComponentPearDescPath());
 		PearSpecifier pearSpecifier = UIMAFramework.getXMLParser().parsePearSpecifier(xmlInputSource);
 		AnalysisEngine analysisEngine = UIMAFramework.produceAnalysisEngine(pearSpecifier, new SimpleNamedResourceManager(), null);
 		
-		JCas jCas = JCasFactory.createJCas();
-		jCas.setDocumentText("Test document text");
-		
-		analysisEngine.process(jCas);
+		JCas jcas = JCasFactory.createJCas();
+		CAS cas = jcas.getCas();
+		jcas.setDocumentText("Test document text");
+
+		analysisEngine.process(jcas);
+
+		Assert.assertEquals("SomeType annotations", 3,
+				cas.select("${package}.SomeType").count());
 	}
 
 	private PackageBrowser installPackage() {
-		
+
 		File installDir = new File("target/generated-test-sources");
-		File pearPackage = new File("target/${artifactId}-${version}.pear");
 		
+		Collection<File> files = FileUtils.listFiles(new File("target/"), new String[] { "pear" },
+				false);
+
+		Assert.assertEquals(1, files.size());
+		File pearPackage = files.iterator().next();
+
 		return PackageInstaller.installPackage(installDir, pearPackage, true, false);
 	}
 }

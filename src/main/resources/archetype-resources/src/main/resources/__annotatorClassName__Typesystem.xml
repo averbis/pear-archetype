@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>${package}.${AnnotatorClassName}TypeSystem</name>
+    <imports>
+        <import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+    </imports>
+    <types>
+        <typeDescription>
+            <name>${package}.SomeType</name>
+            <description>Some initial test type.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+    </types>
 </typeSystemDescription>
