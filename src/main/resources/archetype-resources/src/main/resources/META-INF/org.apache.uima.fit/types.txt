@@ -1,1 +1,1 @@
-classpath*:${packageInPathFormat}/${annotatorClassName}Typesystem.xml
+classpath*:${packageInPathFormat}/${annotatorClassName}TypeSystem.xml
