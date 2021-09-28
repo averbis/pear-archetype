@@ -1,1 +1,1 @@
-classpath*:com/example/nlp/ContractAnnotatorTypesystem.xml
+classpath*:com/example/nlp/ContractAnnotatorTypeSystem.xml

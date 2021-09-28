@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>com.example.nlp.ContractAnnotatorTypeSystem</name>
+    <imports>
+        <import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+    </imports>
+    <types>
+        <typeDescription>
+            <name>com.example.nlp.SomeType</name>
+            <description>Some initial test type.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+    </types>
+</typeSystemDescription>
